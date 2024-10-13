@@ -12,6 +12,8 @@ services:
       - ../..:/workspaces:cached
     env_file:
       - .env
+    ports:
+      - "5150:5150"
   db:
     image: postgres:15.3-alpine
     restart: unless-stopped
